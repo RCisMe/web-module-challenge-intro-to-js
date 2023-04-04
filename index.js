@@ -69,12 +69,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function Multiply(num1, num2){
+function multiply(num1, num2){
   return num1 * num2;
-}
-
-function Multiply(a, b){
-  return a * b;
 }
 
 console.log('task 1 d:', multiply(8,4));
@@ -89,7 +85,7 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(Age){
+function dogYears(age){
   return age * 7;
 }
 
@@ -137,22 +133,26 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(weight, age){
-  if(age >= 1&& weight <= 5){
-    return weight * 0.05;
-  }else if(age >= 1 && weight >= 6 && weight <= 10){
-    return weight * 0.04;
-  }else if(age >= 1 && weight >=11 && weight<= 15){
-    return weight * 0.03
-  }else if (age >= 1 && weight > 15){
-    return weight * 0.02
-  }else if(age < 1 && age >= 0.583){
-    return weight * 0.04
-  }else if(age <0.583 && age >= 0.333){
-    return weight * 0.05;
-  }else if(weight < 0.333){
-    return weight * 0.10;
+  if (age < 1){
+   if (age <.34){
+    return (weight *.10)
+
+    }else if(age < .59){
+      return (weight * .05)
+    }else{
+      return (weight * .04)
+    }
+
   }else{
-    return 'please try again';
+    if (weight < 5){
+      return (weight * .05)
+    }else if(weight < 11){
+      return (weight * .04)
+    }else if(weight < 16){
+      return (weight * .03)
+    }else{
+      return(weight * .02)
+    }
   }
 }
 
@@ -176,10 +176,20 @@ Use the game function below to do the following:
  - tie should return "it's a tie"
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+const randomnumber = Math.random()
+let computeranswer
+if(randomnumber < .34){
+  computeranswer = "rock"
+  
 
+}else if(randomnumber < .67){
+  computeranswer = "paper"
+}else{
+  computeranswer = "scissors"
+}
 function game(user, computer){
   if (user === computer){
-    return 'it is a tie';
+    return "it's a tie";
   }else if(user === 'rock' && computer === 'scissors'){
     return 'you win!';
 }else if(user === 'paper' && computer === 'rock'){
@@ -187,11 +197,11 @@ function game(user, computer){
 }else if(user === 'scissors' && computer === 'paper'){
   return 'you win!';
 }else{
-  return 'you lose';
+  return 'you lose!';
 }
 }
 
-console.log('task 4', game('rock', computer));
+console.log('task 4', game('rock', computeranswer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -205,9 +215,9 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  function miles(km){
+  
     return km * 0.621371;
-  }
+  
 }
   
   console.log('task 5a', miles(2));
@@ -248,7 +258,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(number){
   for(let i = number; i > 0; i --){
-    return '${i} bottles of soda on the wall, ${i} bottles of soda, take on down and pass it around, ${i-1} bottles of soda on the wall';
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
   }
 }
 
@@ -266,7 +276,7 @@ Using the grade function below do the following:
  80-89 should return 'you got a B'
  70-79 should return 'you got a C'
  60-69 should return 'you got a D'
- below should return 'you got an F'
+ below should return 'you got a F'
 */
 
 function grade(number){
@@ -279,7 +289,7 @@ function grade(number){
   }else if(number < 70 && number >= 60){
     return 'you got a D';
   }else if(number < 60){
-    return 'you got a F';
+    return 'you got an F';
   }
 }
 
