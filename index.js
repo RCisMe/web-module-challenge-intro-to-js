@@ -69,11 +69,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
+function Multiply(num1, num2){
   return num1 * num2;
 }
 
-function multiply(a, b){
+function Multiply(a, b){
   return a * b;
 }
 
@@ -137,7 +137,7 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(weight, age){
-  if(age >= 1&& weight <= 5);{
+  if(age >= 1&& weight <= 5){
     return weight * 0.05;
   }else if(age >= 1 && weight >= 6 && weight <= 10){
     return weight * 0.04;
@@ -270,7 +270,7 @@ Using the grade function below do the following:
 */
 
 function grade(number){
-  if(number >= 90);
+  if(number >= 90){
   return 'you got an A';
   }else if(number < 90 && number >= 80){
     return 'you got a B';
@@ -279,7 +279,7 @@ function grade(number){
   }else if(number < 70 && number >= 60){
     return 'you got a D';
   }else if(number < 60){
-    return 'you got a F';{
+    return 'you got a F';
   }
 }
 
@@ -297,10 +297,8 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(Vowel) {
-  for(let result = text.includes(a, e, i, o, u, A, E, I, O, U)){
-  }
-}
+
+
 
 
 
